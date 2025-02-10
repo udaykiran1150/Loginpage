@@ -21,25 +21,28 @@ app.post('/login',(req,res)=>
 })
 app.post('/signin',(req,res)=>
 {
-    let {email,password}=req.body;
-    FarmerModel.findOne({email:email})
-    .then(user=>{
+     const {email,password}=req.body;
+     FarmerModel.findOne({email:email})
+     .then(user=>{
         if(user)
         {
-            if(user.password===password)
-            {
-                res.json("success");
-            }
-            else
-            {
-                res.json("incorrect password");
-            }
+             if(user.password===password)
+             {
+                res.json('success');
+             }
+             else
+             {
+                res.json('passwordincorrect')
+             }
         }
         else
         {
-            res.json("no record found");
+            res.json('nouserfound')
         }
-    })
+    
+    }
+     )
+
 })
 app.listen(port,hostname,()=>
 {

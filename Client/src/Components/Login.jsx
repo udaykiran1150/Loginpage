@@ -10,20 +10,20 @@ const Login = () => {
      let [lpassword,setLpassword]=useState();
      let Navigate=useNavigate()
 
-  let HandleSignin=()=>
+  let HandleSignin=(e)=>
   {
-         axios.post('http://localhost:5010/signin',{email:lemail,password:lpassword})
-         .then(res=>{
+        e.preventDefault();
+        axios.post('http://localhost:5010/signin',{email:lemail,password:lpassword})
+        .then(res=>{
+          
+          console.log(res)
           if(res.data==='success')
           {
             Navigate('/home');
           }
-          else{
-           Navigate('/')
-          }
-          console.log(res)})
-         .catch(err =>console.log(err)) 
-   
+         
+        })
+        .catch(err=>console.log(err))
   }
   return (
     <div className='signin-container'>
