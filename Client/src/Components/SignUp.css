@@ -1,0 +1,28 @@
+
+.sign-up-container{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 300px;
+    align-items: center;
+}
+.form-elements
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+.form-element
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.form-element label
+{
+    font-size: 20px;
+    font-weight: 600;
+}
