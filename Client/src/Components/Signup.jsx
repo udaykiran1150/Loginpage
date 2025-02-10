@@ -13,7 +13,7 @@ let HandleSubmit=(e)=>
 {
   e.preventDefault();
   axios.post('http://localhost:5010/login',{name,email,password})
-  .then(res=>{console.log(res)
+  .then(res=>{console.log(res.data)
         Navigate('/signin');
   })
   .catch(err=>console.log(err));

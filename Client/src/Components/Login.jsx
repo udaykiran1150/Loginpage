@@ -22,7 +22,7 @@ const Login = () => {
            Navigate('/')
           }
           console.log(res)})
-         .catch(err =>console.log(err))
+         .catch(err =>console.log(err)) 
    
   }
   return (
